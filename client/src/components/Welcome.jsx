@@ -1,4 +1,4 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 // import { SiEthereum } from "react-icons/si";
 // import { BsInfoCircle } from "react-icons/bs";
@@ -76,7 +76,7 @@ const Welcome = () => {
           </div>
         </div>
 
-        <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
+        <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10">
           <Card />
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input placeholder="Address To" name="addressTo" type="text" />
