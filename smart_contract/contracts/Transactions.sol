@@ -17,11 +17,11 @@ contract Transactions{
 
     TrasnferStruct[] transactions;
 
-    function addToBlockchain(address payable reciever, uint amount, string memory message, uint256 timestamp,string memory keyword) public{
-        TrasnferStruct memory newTransaction = TrasnferStruct(from,to,amount,message,timestamp,keyword);
+    function addToBlockchain(address payable to, uint amount, string memory message,string memory keyword) public{
+        TrasnferStruct memory newTransaction = TrasnferStruct(msg.sender,to,amount,message,block.timestamp,keyword);
         transactions.push(newTransaction);
         transactionCounter++;
-        emit Transfer(from,to,amount,message,timestamp,keyword);
+        emit Transfer(msg.sender,to,amount,message,block.timestamp,keyword);
     }
 
     function getAllTransactions() public view returns(TrasnferStruct[] memory){
